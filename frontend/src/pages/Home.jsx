@@ -72,7 +72,7 @@ const Home = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1566577739112-5180d4bf9390?q=80&w=2000)',
+            backgroundImage: 'url(https://0201.nccdn.net/1_2/000/000/0d2/3bb/inside2-1024x576.jpg)',
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-900/70"></div>
@@ -133,12 +133,12 @@ const Home = () => {
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  src="https://images.unsplash.com/photo-1610012367888-1e3fa8c089ec?q=80&w=800"
+                  src="https://0201.nccdn.net/1_2/000/000/153/76b/IMG_0355-2816x2112.jpg"
                   alt="Batting cage"
                   className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1566577134770-3d85bb3a9cc4?q=80&w=800"
+                  src="https://0201.nccdn.net/4_2/000/000/000/dd3/IMG_0413-2816x2112.jpg"
                   alt="Baseball player"
                   className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 mt-8"
                 />

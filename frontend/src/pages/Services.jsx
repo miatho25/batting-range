@@ -90,7 +90,7 @@ const Services = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1564069114553-7215e1ff1890?q=80&w=2000)',
+            backgroundImage: 'url(https://0201.nccdn.net/4_2/000/000/03f/ac7/IMG_0343-2816x2112.jpg)',
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-700/80"></div>

@@ -52,7 +52,7 @@ const Contact = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?q=80&w=2000)',
+            backgroundImage: 'url(https://0201.nccdn.net/1_2/000/000/177/152/IMG_0420-2816x2112.jpg)',
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-700/80"></div>

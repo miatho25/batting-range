@@ -10,13 +10,11 @@ const Footer = () => {
           {/* About Section */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">UD</span>
-              </div>
-              <div>
-                <div className="text-white font-bold text-lg">Upper Deck</div>
-                <div className="text-red-400 font-semibold text-sm">Batting Range</div>
-              </div>
+              <img 
+                src="https://0201.nccdn.net/1_2/000/000/154/a0b/TheUpperDeckBattingRangeLOGO.PNG" 
+                alt="Upper Deck Batting Range Logo"
+                className="h-16 w-auto"
+              />
             </div>
             <p className="text-blue-200 text-sm leading-relaxed">
               Your premier destination for batting practice in Riverdale, GA. Featuring 10 covered cages and professional equipment.

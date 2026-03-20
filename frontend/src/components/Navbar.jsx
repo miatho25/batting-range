@@ -32,13 +32,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
-              <span className="text-white font-bold text-xl">UD</span>
-            </div>
-            <div className="hidden sm:block">
-              <div className="text-blue-900 font-bold text-xl leading-tight">Upper Deck</div>
-              <div className="text-red-600 font-semibold text-sm">Batting Range</div>
-            </div>
+            <img 
+              src="https://0201.nccdn.net/1_2/000/000/154/a0b/TheUpperDeckBattingRangeLOGO.PNG" 
+              alt="Upper Deck Batting Range Logo"
+              className="h-16 w-auto transform group-hover:scale-105 transition-transform duration-300"
+            />
           </Link>
 
           {/* Desktop Navigation */}
