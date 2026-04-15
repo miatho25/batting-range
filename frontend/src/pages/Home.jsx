@@ -133,7 +133,7 @@ const Home = () => {
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  src="https://customer-assets.emergentagent.com/job_bat-modern/artifacts/ll7l1iz0_image.png"
+                  src="https://customer-assets.emergentagent.com/job_bat-modern/artifacts/68yelvmh_image.png"
                   alt="Player swinging bat in cage"
                   className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300"
                 />
