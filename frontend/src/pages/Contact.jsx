@@ -68,6 +68,16 @@ const Contact = () => {
       {/* Contact Information */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Photo Section */}
+          <div className="mb-16">
+            <img
+              src="https://0201.nccdn.net/1_2/000/000/177/152/IMG_0420-2816x2112.jpg"
+              alt="Upper Deck Batting Range facility"
+              className="rounded-2xl shadow-2xl w-full max-h-96 object-cover"
+            />
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>

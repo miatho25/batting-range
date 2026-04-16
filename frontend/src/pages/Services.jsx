@@ -140,6 +140,26 @@ const Services = () => {
               From individual practice to team training and special events - we've got you covered
             </p>
           </div>
+          
+          {/* Photo Gallery */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <img
+              src="https://0201.nccdn.net/1_2/000/000/153/76b/IMG_0355-2816x2112.jpg"
+              alt="Upper Deck batting cages"
+              className="rounded-lg shadow-xl w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
+            />
+            <img
+              src="https://customer-assets.emergentagent.com/job_bat-modern/artifacts/68yelvmh_image.png"
+              alt="Player practicing"
+              className="rounded-lg shadow-xl w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
+            />
+            <img
+              src="https://0201.nccdn.net/4_2/000/000/000/dd3/IMG_0413-2816x2112.jpg"
+              alt="Batting practice"
+              className="rounded-lg shadow-xl w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <Card
