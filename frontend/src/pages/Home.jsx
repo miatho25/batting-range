@@ -70,7 +70,7 @@ const Home = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-[700px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[700px] flex items-center justify-center overflow-hidden pt-20">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -79,7 +79,7 @@ const Home = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 to-blue-900/75"></div>
         </div>
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16 sm:pt-0">
           <div className="inline-block bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
             RIVERDALE'S #1 BATTING FACILITY
           </div>
