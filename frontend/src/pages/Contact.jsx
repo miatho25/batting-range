@@ -178,10 +178,10 @@ const Contact = () => {
                     <div>
                       <h3 className="font-bold text-gray-900 text-lg mb-1">Email</h3>
                       <a
-                        href="mailto:info@upperdeckbattingrange.com"
+                        href="mailto:upperdeckbattingrange@gmail.com"
                         className="text-blue-600 hover:text-blue-700 font-semibold"
                       >
-                        info@upperdeckbattingrange.com
+                        upperdeckbattingrange@gmail.com
                       </a>
                       <p className="text-gray-600 text-sm mt-1">We'll respond within 24 hours</p>
                     </div>

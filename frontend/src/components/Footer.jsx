@@ -59,8 +59,8 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
-                <a href="mailto:info@upperdeckbattingrange.com" className="text-blue-200 hover:text-white transition-colors">
-                  info@upperdeckbattingrange.com
+                <a href="mailto:upperdeckbattingrange@gmail.com" className="text-blue-200 hover:text-white transition-colors">
+                  upperdeckbattingrange@gmail.com
                 </a>
               </li>
             </ul>
