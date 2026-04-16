@@ -13,6 +13,8 @@ import {
   Zap,
   MapPin,
   ArrowRight,
+  Phone,
+  CheckCircle,
 } from 'lucide-react';
 
 const Home = () => {
@@ -68,38 +70,55 @@ const Home = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[700px] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: 'url(https://0201.nccdn.net/1_2/000/000/0d2/3bb/inside2-1024x576.jpg)',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-900/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 to-blue-900/75"></div>
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-block bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+            RIVERDALE'S #1 BATTING FACILITY
+          </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
             The Upper Deck Batting Range is <span className="text-red-500">Back on Deck</span>
           </h1>
-          <p className="text-2xl md:text-3xl text-red-400 font-bold mb-8 animate-fade-in-delay">
+          <p className="text-2xl md:text-3xl text-red-400 font-bold mb-4 animate-fade-in-delay">
             Come Practice Your Swing Today!
           </p>
+          <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
+            Professional batting cages in Riverdale, GA • Perfect for players of all skill levels • 
+            10 covered cages with multiple speed settings
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <div className="text-white">
-              <div className="text-xl font-semibold">MON-SAT 12-8</div>
+            <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
+              <div className="text-white text-sm font-semibold mb-1">MON-SAT</div>
+              <div className="text-red-400 text-xl font-bold">12PM - 8PM</div>
             </div>
-            <div className="hidden sm:block w-px h-8 bg-white/30"></div>
-            <div className="text-white">
-              <div className="text-xl font-semibold">SUN 12-6</div>
+            <div className="hidden sm:block w-px h-12 bg-white/30"></div>
+            <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
+              <div className="text-white text-sm font-semibold mb-1">SUNDAY</div>
+              <div className="text-red-400 text-xl font-bold">12PM - 6PM</div>
             </div>
           </div>
-          <Button
-            onClick={handleBooking}
-            className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-6 rounded-lg transform hover:scale-105 transition-all duration-300 shadow-xl"
-          >
-            BOOK A CAGE NOW
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              onClick={handleBooking}
+              className="bg-red-600 hover:bg-red-700 text-white text-xl px-10 py-8 rounded-lg transform hover:scale-105 transition-all duration-300 shadow-2xl"
+            >
+              BOOK A CAGE NOW
+              <ArrowRight className="ml-2 w-6 h-6" />
+            </Button>
+            <a href="tel:770-742-3246">
+              <Button className="bg-white hover:bg-gray-100 text-blue-900 text-xl px-10 py-8 rounded-lg transform hover:scale-105 transition-all duration-300 shadow-2xl">
+                <Phone className="mr-2 w-6 h-6" />
+                770-742-3246
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -108,27 +127,49 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-red-600 font-bold text-xl mb-4 italic">The Go-To Batting Range</h2>
+              <h2 className="text-red-600 font-bold text-xl mb-4 italic">Riverdale's Premier Batting Facility</h2>
               <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Enjoy Our 10 Covered Batting Cages
+                Perfect Your Swing at Atlanta's Best Batting Cages
               </h3>
-              <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                Are you looking for a batting range in Riverdale, GA? Search no further than The Upper Deck
-                Batting Range. Enjoy your well-loved sports while spending a wonderful time with your family
-                and friends.
-              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                  <p className="text-gray-700 text-lg">
+                    <span className="font-bold">For Everyone:</span> Youth players, high school athletes, weekend warriors, and teams
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                  <p className="text-gray-700 text-lg">
+                    <span className="font-bold">The Solution:</span> Improve your batting skills with 10 speeds (35-70 mph) in our covered, all-weather facility
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                  <p className="text-gray-700 text-lg">
+                    <span className="font-bold">Why Us:</span> Family-owned since 2010, affordable rates, convenient location in Riverdale, GA
+                  </p>
+                </div>
+              </div>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                The facility provides 10 covered batting cages that will bring out the softball and baseball
-                enthusiast in you. For your convenience, we also have concessions that you will absolutely
-                love.
+                Located in the heart of Riverdale, serving Atlanta's south side. Whether you're preparing for 
+                tryouts, working on your technique, or just having fun with family and friends, we provide the 
+                perfect environment to practice and improve.
               </p>
-              <Button
-                onClick={handleBooking}
-                className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-6 text-lg rounded-lg"
-              >
-                Learn More
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  onClick={handleBooking}
+                  className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 text-lg rounded-lg"
+                >
+                  Reserve Your Cage
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+                <a href="/services">
+                  <Button className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-6 text-lg rounded-lg">
+                    View Pricing
+                  </Button>
+                </a>
+              </div>
             </div>
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">

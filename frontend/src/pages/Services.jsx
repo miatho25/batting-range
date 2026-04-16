@@ -13,45 +13,39 @@ import {
   DollarSign,
   ArrowRight,
   CheckCircle,
+  PartyPopper,
+  GraduationCap,
 } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
       icon: <Target className="w-8 h-8" />,
-      title: '10 Covered Batting Cages',
-      description: 'All-weather covered cages for baseball and softball practice',
-      features: ['Professional equipment', 'Well-maintained facilities', 'Safe environment'],
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'Multiple Speed Options',
-      description: '10 different batting speeds to match your skill level',
-      features: ['Beginner speeds (35-45 mph)', 'Intermediate (45-60 mph)', 'Advanced (60-70 mph)'],
+      title: 'Individual Practice Sessions',
+      description: 'Perfect for personal skill development and technique improvement',
+      features: ['Pay per session or buy token packages', 'Choose your speed (35-70 mph)', 'Drop-in anytime during open hours', 'Great for all skill levels'],
+      price: 'Starting at $5',
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: 'Team Rentals',
-      description: 'Perfect for team practice sessions and group training',
-      features: ['Multiple cage bookings', 'Flexible scheduling', 'Group discounts available'],
+      title: 'Team Rentals & Group Practice',
+      description: 'Ideal for baseball and softball teams to practice together',
+      features: ['Reserve multiple cages', 'Perfect for team training', 'Flexible scheduling', 'Group discount rates'],
+      price: 'From $75/hour',
     },
     {
-      icon: <Trophy className="w-8 h-8" />,
-      title: 'Individual Practice',
-      description: 'Drop-in sessions for individual skill development',
-      features: ['Pay-per-session options', 'No membership required', 'Walk-ins welcome'],
+      icon: <GraduationCap className="w-8 h-8" />,
+      title: 'Private Coaching & Training',
+      description: 'One-on-one instruction to take your game to the next level',
+      features: ['Experienced coaches', 'Personalized training plans', 'Video analysis available', 'Book by appointment'],
+      price: 'Call for rates',
     },
     {
-      icon: <Calendar className="w-8 h-8" />,
-      title: 'Online Booking',
-      description: 'Reserve your cage time in advance',
-      features: ['Easy online scheduling', 'Real-time availability', 'Instant confirmation'],
-    },
-    {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: 'Flexible Pricing',
-      description: 'Competitive rates and payment options',
-      features: ['Hourly rates', 'Token packages', 'Multiple payment methods'],
+      icon: <PartyPopper className="w-8 h-8" />,
+      title: 'Birthday Parties & Events',
+      description: 'Make your celebration unforgettable with a batting cage party',
+      features: ['Private cage reservations', 'Party packages available', 'Fun for all ages', 'Convenient party space'],
+      price: 'Custom packages',
     },
   ];
 
@@ -60,20 +54,44 @@ const Services = () => {
       title: 'Single Session',
       price: '$5',
       unit: 'per session',
-      features: ['40 pitches', 'Any speed setting', 'Walk-in friendly', 'No commitment'],
+      description: 'Perfect for trying us out',
+      features: [
+        '40 pitches per session',
+        'Any speed setting (35-70 mph)',
+        'Walk-ins welcome',
+        'No membership required',
+        'Pay as you go',
+      ],
+      cta: 'Drop In Today',
     },
     {
       title: 'Token Package',
       price: '$40',
       unit: '10 sessions',
-      features: ['400 total pitches', 'Save $10', 'Never expires', 'Shareable'],
+      description: 'Best value for regular practice',
+      features: [
+        '400 total pitches',
+        'Save $10 vs single sessions',
+        'Tokens never expire',
+        'Shareable with family',
+        'Most popular option',
+      ],
       popular: true,
+      cta: 'Buy Package',
     },
     {
       title: 'Team Rental',
       price: '$75',
       unit: 'per hour',
-      features: ['2 cages included', 'Perfect for teams', 'Flexible booking', 'Group training'],
+      description: 'Great for team practice',
+      features: [
+        '2 batting cages included',
+        'Perfect for team training',
+        'Reserve in advance',
+        'Flexible time slots',
+        'Additional cages available',
+      ],
+      cta: 'Book Team Session',
     },
   ];
 
@@ -86,20 +104,30 @@ const Services = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden mt-20">
+      <section className="relative h-[500px] flex items-center justify-center overflow-hidden mt-20">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: 'url(https://0201.nccdn.net/4_2/000/000/03f/ac7/IMG_0343-2816x2112.jpg)',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-700/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 to-blue-700/85"></div>
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">Our Services</h1>
-          <p className="text-xl text-blue-100">
-            Professional batting cage facilities with everything you need to improve your game
+          <div className="inline-block bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+            BATTING CAGES IN RIVERDALE, GA
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Batting Cages & Training</h1>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Professional baseball and softball batting cages near Atlanta • 10 speeds • All skill levels welcome
           </p>
+          <Button
+            onClick={handleBooking}
+            className="bg-red-600 hover:bg-red-700 text-white text-xl px-10 py-6 rounded-lg transform hover:scale-105 transition-all duration-300"
+          >
+            Book a Session
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Button>
         </div>
       </section>
 
@@ -107,27 +135,30 @@ const Services = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What We Offer</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Everything you need for an exceptional batting practice experience
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <p className="text-gray-600 text-xl max-w-3xl mx-auto">
+              From individual practice to team training and special events - we've got you covered
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-none bg-white shadow-md"
+                className="p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-100"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-500 rounded-lg flex items-center justify-center mb-6 text-white">
                   {service.icon}
                 </div>
-                <h3 className="font-bold text-gray-900 text-xl mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="space-y-2">
+                <div className="flex justify-between items-start mb-3">
+                  <h3 className="font-bold text-gray-900 text-2xl">{service.title}</h3>
+                  <span className="text-red-600 font-bold text-lg">{service.price}</span>
+                </div>
+                <p className="text-gray-600 mb-6 text-lg">{service.description}</p>
+                <ul className="space-y-3">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start space-x-2">
                       <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700 text-sm">{feature}</span>
+                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -141,30 +172,31 @@ const Services = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Pricing Options</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Choose the option that works best for you
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Pricing & Packages</h2>
+            <p className="text-gray-600 text-xl max-w-2xl mx-auto">
+              Affordable rates for batting practice in Riverdale • Pay per session or save with packages
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {pricingOptions.map((option, index) => (
               <Card
                 key={index}
                 className={`p-8 transition-all duration-300 transform hover:-translate-y-2 ${
                   option.popular
-                    ? 'border-2 border-red-600 shadow-2xl scale-105'
-                    : 'border-none shadow-md hover:shadow-xl'
+                    ? 'border-4 border-red-600 shadow-2xl scale-105 bg-white'
+                    : 'border-2 border-gray-200 shadow-lg hover:shadow-2xl bg-white'
                 }`}
               >
                 {option.popular && (
-                  <div className="bg-red-600 text-white text-sm font-bold py-1 px-4 rounded-full inline-block mb-4">
-                    MOST POPULAR
+                  <div className="bg-red-600 text-white text-sm font-bold py-2 px-4 rounded-full inline-block mb-4">
+                    🔥 MOST POPULAR
                   </div>
                 )}
                 <h3 className="font-bold text-gray-900 text-2xl mb-2">{option.title}</h3>
+                <p className="text-gray-600 mb-4">{option.description}</p>
                 <div className="mb-6">
                   <span className="text-5xl font-bold text-blue-900">{option.price}</span>
-                  <span className="text-gray-600 ml-2">{option.unit}</span>
+                  <span className="text-gray-600 ml-2 text-lg">/ {option.unit}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {option.features.map((feature, idx) => (
@@ -176,65 +208,87 @@ const Services = () => {
                 </ul>
                 <Button
                   onClick={handleBooking}
-                  className={`w-full py-6 text-lg ${
+                  className={`w-full py-6 text-lg font-bold ${
                     option.popular
                       ? 'bg-red-600 hover:bg-red-700 text-white'
                       : 'bg-blue-900 hover:bg-blue-800 text-white'
                   }`}
                 >
-                  Book Now
+                  {option.cta}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Card>
             ))}
           </div>
+
+          {/* Additional Pricing Info */}
+          <Card className="p-8 bg-blue-50 border-2 border-blue-200">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div>
+                <Zap className="w-12 h-12 text-red-600 mx-auto mb-4" />
+                <h4 className="font-bold text-xl mb-2">10 Speed Settings</h4>
+                <p className="text-gray-600">From 35 mph (youth) to 70 mph (advanced)</p>
+              </div>
+              <div>
+                <Target className="w-12 h-12 text-red-600 mx-auto mb-4" />
+                <h4 className="font-bold text-xl mb-2">Baseball & Softball</h4>
+                <p className="text-gray-600">Cages configured for both sports</p>
+              </div>
+              <div>
+                <Trophy className="w-12 h-12 text-red-600 mx-auto mb-4" />
+                <h4 className="font-bold text-xl mb-2">All Skill Levels</h4>
+                <p className="text-gray-600">Beginners to pros welcome</p>
+              </div>
+            </div>
+          </Card>
         </div>
       </section>
 
       {/* Hours Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="p-12 bg-gradient-to-br from-blue-900 to-blue-800 text-white border-none">
+          <Card className="p-12 bg-gradient-to-br from-blue-900 to-blue-800 text-white border-none shadow-2xl">
             <div className="flex items-center justify-center mb-8">
               <Clock className="w-16 h-16" />
             </div>
             <h2 className="text-4xl font-bold text-center mb-8">Hours of Operation</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center mb-8">
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
                 <h3 className="text-2xl font-bold mb-3">Monday - Saturday</h3>
                 <p className="text-3xl text-blue-100">12:00 PM - 8:00 PM</p>
               </div>
-              <div>
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
                 <h3 className="text-2xl font-bold mb-3">Sunday</h3>
                 <p className="text-3xl text-blue-100">12:00 PM - 6:00 PM</p>
               </div>
             </div>
-            <div className="mt-8 text-center">
-              <p className="text-blue-200">Open 7 days a week for your convenience!</p>
+            <div className="text-center">
+              <p className="text-blue-200 text-lg mb-4">📍 Located in Riverdale, GA - Easy access from Atlanta, College Park, and Clayton County</p>
+              <p className="text-white font-semibold text-xl">Open 7 days a week for your convenience!</p>
             </div>
           </Card>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Final CTA */}
+      <section className="py-20 bg-gradient-to-r from-red-600 to-red-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Ready to Practice Your Swing?
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Improve Your Swing?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Book your batting cage session today and experience the difference!
+          <p className="text-xl text-red-100 mb-8">
+            Book your batting cage session at Riverdale's premier baseball training facility
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={handleBooking}
-              className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-6 rounded-lg"
+              className="bg-white hover:bg-gray-100 text-red-600 text-xl px-10 py-6 rounded-lg transform hover:scale-105 transition-all duration-300 font-bold"
             >
-              Book A Cage Now
-              <ArrowRight className="ml-2 w-5 h-5" />
+              Book a Cage Now
+              <ArrowRight className="ml-2 w-6 h-6" />
             </Button>
             <a href="tel:770-742-3246">
-              <Button className="bg-blue-900 hover:bg-blue-800 text-white text-lg px-8 py-6 rounded-lg">
+              <Button className="bg-blue-900 hover:bg-blue-800 text-white text-xl px-10 py-6 rounded-lg transform hover:scale-105 transition-all duration-300 font-bold">
                 Call: 770-742-3246
               </Button>
             </a>
