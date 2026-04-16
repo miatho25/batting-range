@@ -108,7 +108,7 @@ const Services = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://0201.nccdn.net/4_2/000/000/03f/ac7/IMG_0343-2816x2112.jpg)',
+            backgroundImage: 'url(https://0201.nccdn.net/1_2/000/000/0d2/3bb/inside2-1024x576.jpg)',
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 to-blue-700/85"></div>
@@ -149,8 +149,8 @@ const Services = () => {
               className="rounded-lg shadow-xl w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
             />
             <img
-              src="https://customer-assets.emergentagent.com/job_bat-modern/artifacts/68yelvmh_image.png"
-              alt="Player practicing"
+              src="https://0201.nccdn.net/4_2/000/000/03f/ac7/IMG_0343-2816x2112.jpg"
+              alt="Player in batting cage"
               className="rounded-lg shadow-xl w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
             />
             <img
