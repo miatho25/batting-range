@@ -23,7 +23,7 @@ const Services = () => {
       icon: <Target className="w-8 h-8" />,
       title: 'Individual Practice Sessions',
       description: 'Perfect for personal skill development and technique improvement',
-      features: ['Pay per session or buy token packages', 'Choose your speed (35-70 mph)', 'Drop-in anytime during open hours', 'Great for all skill levels'],
+      features: ['Pay per session or buy token packages', 'Baseball: 25-85 mph speeds available', 'Softball: 2 slow pitch + 1 fast pitch', 'Drop-in anytime during open hours', 'Great for all skill levels'],
       price: 'Starting at $5',
     },
     {
@@ -57,7 +57,8 @@ const Services = () => {
       description: 'Perfect for trying us out',
       features: [
         '40 pitches per session',
-        'Any speed setting (35-70 mph)',
+        'Baseball: 25-85 mph',
+        'Softball: slow or fast pitch',
         'Walk-ins welcome',
         'No membership required',
         'Pay as you go',
@@ -119,7 +120,7 @@ const Services = () => {
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Batting Cages & Training</h1>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Professional baseball and softball batting cages near Atlanta • 10 speeds • All skill levels welcome
+            Professional baseball and softball batting cages near Atlanta • Baseball: 25-85 mph • Softball: 2 slow pitch + 1 fast pitch • All skill levels welcome
           </p>
           <Button
             onClick={handleBooking}
@@ -246,18 +247,18 @@ const Services = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
                 <Zap className="w-12 h-12 text-red-600 mx-auto mb-4" />
-                <h4 className="font-bold text-xl mb-2">10 Speed Settings</h4>
-                <p className="text-gray-600">From 35 mph (youth) to 70 mph (advanced)</p>
+                <h4 className="font-bold text-xl mb-2">Baseball Cages</h4>
+                <p className="text-gray-600">25-85 mph for all skill levels</p>
               </div>
               <div>
                 <Target className="w-12 h-12 text-red-600 mx-auto mb-4" />
-                <h4 className="font-bold text-xl mb-2">Baseball & Softball</h4>
-                <p className="text-gray-600">Cages configured for both sports</p>
+                <h4 className="font-bold text-xl mb-2">3 Softball Cages</h4>
+                <p className="text-gray-600">2 slow pitch + 1 fast pitch</p>
               </div>
               <div>
                 <Trophy className="w-12 h-12 text-red-600 mx-auto mb-4" />
-                <h4 className="font-bold text-xl mb-2">All Skill Levels</h4>
-                <p className="text-gray-600">Beginners to pros welcome</p>
+                <h4 className="font-bold text-xl mb-2">10 Total Cages</h4>
+                <p className="text-gray-600">All covered for year-round use</p>
               </div>
             </div>
           </Card>

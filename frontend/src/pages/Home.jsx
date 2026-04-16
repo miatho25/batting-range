@@ -31,18 +31,18 @@ const Home = () => {
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: 'Features Covered Batting Cages',
-      description: 'All-weather protection',
+      title: '10 Covered Batting Cages',
+      description: 'All-weather protection year-round',
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: 'Has 10 Batting Speeds',
-      description: 'From beginner to pro levels',
+      title: 'Baseball: 25-85 MPH',
+      description: 'Multiple speeds for all levels',
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Licensed, Bonded, and Insured',
-      description: 'Your safety is our priority',
+      title: '3 Softball Cages',
+      description: '2 slow pitch + 1 fast pitch',
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -90,8 +90,8 @@ const Home = () => {
             Come Practice Your Swing Today!
           </p>
           <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
-            Professional batting cages in Riverdale, GA • Perfect for players of all skill levels • 
-            10 covered cages with multiple speed settings
+            Professional batting cages in Riverdale, GA • Baseball (25-85 mph) • Softball (2 slow pitch + 1 fast pitch) • 
+            Perfect for all skill levels
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
@@ -141,7 +141,7 @@ const Home = () => {
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                   <p className="text-gray-700 text-lg">
-                    <span className="font-bold">The Solution:</span> Improve your batting skills with 10 speeds (35-70 mph) in our covered, all-weather facility
+                    <span className="font-bold">The Solution:</span> Improve your batting skills with baseball (25-85 mph) and softball cages (2 slow pitch, 1 fast pitch) in our covered, all-weather facility
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
