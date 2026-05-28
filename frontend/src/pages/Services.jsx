@@ -67,12 +67,12 @@ const Services = () => {
     },
     {
       title: 'Token Package',
-      price: '$35',
+      price: '$40',
       unit: '10 sessions',
       description: 'Best value for regular practice',
       features: [
         '500 total pitches',
-        'Save $15 vs single sessions',
+        'Save $10 vs single sessions',
         'Tokens never expire',
         'Shareable with family',
         '🔥 Best token package',
