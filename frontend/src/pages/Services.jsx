@@ -56,7 +56,7 @@ const Services = () => {
       unit: 'per session',
       description: 'Perfect for trying us out',
       features: [
-        '40 pitches per session',
+        '50 pitches per session',
         'Baseball: 25-85 mph',
         'Softball: slow or fast pitch',
         'Walk-ins welcome',
@@ -67,15 +67,15 @@ const Services = () => {
     },
     {
       title: 'Token Package',
-      price: '$40',
+      price: '$35',
       unit: '10 sessions',
       description: 'Best value for regular practice',
       features: [
-        '400 total pitches',
-        'Save $10 vs single sessions',
+        '500 total pitches',
+        'Save $15 vs single sessions',
         'Tokens never expire',
         'Shareable with family',
-        'Most popular option',
+        '🔥 Best token package',
       ],
       popular: true,
       cta: 'Buy Package',
