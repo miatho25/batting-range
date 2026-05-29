@@ -252,7 +252,7 @@ const Contact = () => {
                     <Instagram className="w-6 h-6 text-white" />
                   </a>
                   <a
-                    href="https://www.tiktok.com/@upperdeckbattingrange"
+                    href="https://www.tiktok.com/@upperdeckbattingr"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-900 hover:bg-gray-800 rounded-lg flex items-center justify-center transition-colors duration-300"
