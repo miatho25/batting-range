@@ -69,11 +69,14 @@ const Navbar = () => {
                 )}
               </Link>
             ))}
-            <a href="tel:770-742-3246">
+          <a href="tel:770-742-3246">
               <Button className="bg-red-600 hover:bg-red-700 text-white">
                 <Phone className="w-4 h-4 mr-2" />
                 770-742-3246
               </Button>
+            </a>
+            <a href="/signup.html">
+              <Button className="bg-blue-900 hover:bg-blue-800 text-white">Join the Club</Button>
             </a>
           </div>
 
@@ -105,11 +108,14 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <a href="tel:770-742-3246" className="block">
+           <a href="tel:770-742-3246" className="block">
               <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
                 <Phone className="w-4 h-4 mr-2" />
                 770-742-3246
               </Button>
+            </a>
+            <a href="/signup.html" className="block">
+              <Button className="w-full bg-blue-900 hover:bg-blue-800 text-white">Join the Club</Button>
             </a>
           </div>
         </div>
