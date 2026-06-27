@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Upper Deck Club — Member Deals & Cage-Time Specials</title>
+<meta name="description" content="Join the Upper Deck Club free for member deals, priority booking, and birthday & party perks at Upper Deck Batting Range in Riverdale, GA."/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<style>
+  :root{
+    --navy:#0e1f3d; --navy2:#15294d; --card:#16284a; --line:#27406e;
+    --red:#e23b3b; --red2:#ff5a5a; --ink:#eaf0fb; --mute:#9fb3d4;
+    --green:#34d399;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:radial-gradient(1100px 520px at 50% -10%, #1a3a66 0%, var(--navy) 60%), var(--navy);
+    color:var(--ink);min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:26px 16px 48px}
+  .wrap{width:100%;max-width:440px}
+  .brand{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:16px}
+  .brand .logo{width:46px;height:46px;border-radius:11px;background:linear-gradient(135deg,var(--red),#9c1f1f);
+    display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:15px}
+  .brand b{font-size:19px;letter-spacing:.3px}
+  .brand small{display:block;color:var(--mute);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 22px;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+  .badge{display:inline-block;background:rgba(226,59,59,.16);color:var(--red2);font-size:12px;font-weight:800;
+    padding:5px 12px;border-radius:999px;margin-bottom:14px;letter-spacing:.5px}
+  h1{font-size:26px;line-height:1.15;margin-bottom:6px}
+  h1 span{color:var(--red2)}
+  .sub{color:var(--mute);font-size:14.5px;line-height:1.5;margin-bottom:14px}
+  .perks{list-style:none;margin:0 0 20px;padding:0}
+  .perks li{font-size:13.5px;color:var(--ink);padding:5px 0 5px 24px;position:relative}
+  .perks li:before{content:"▸";color:var(--red2);position:absolute;left:0;font-weight:800}
+  label{display:block;font-size:12.5px;font-weight:600;color:var(--mute);margin:14px 0 6px;letter-spacing:.3px}
+  input[type=text],input[type=email],input[type=tel],input[type=date]{
+    width:100%;background:#0f213f;border:1px solid var(--line);border-radius:10px;color:var(--ink);
+    padding:13px 14px;font-size:16px;outline:none}
+  input:focus{border-color:var(--red2)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+  .chip{display:inline-flex;align-items:center;gap:7px;background:#0f213f;border:1px solid var(--line);
+    border-radius:999px;padding:8px 13px;font-size:13px;cursor:pointer;user-select:none}
+  .chip input{accent-color:var(--red2);width:15px;height:15px}
+  .check{display:flex;gap:10px;align-items:flex-start;margin-top:13px;font-size:13.5px;line-height:1.4}
+  .check input{margin-top:2px;width:18px;height:18px;accent-color:var(--red2);flex:none}
+  button{width:100%;margin-top:22px;background:linear-gradient(135deg,var(--red),#9c1f1f);color:#fff;
+    font-size:17px;font-weight:800;border:none;border-radius:12px;padding:15px;cursor:pointer;letter-spacing:.3px}
+  button:disabled{opacity:.5;cursor:not-allowed}
+  .fine{color:var(--mute);font-size:11.5px;line-height:1.5;margin-top:16px;text-align:center}
+  .ok,.err{display:none;text-align:center;padding:30px 10px}
+  .ok h2{color:var(--red2);font-size:24px;margin-bottom:10px}
+  .ok p,.err p{color:var(--mute);font-size:15px;line-height:1.5}
+  .err h2{color:#ff6b6b;font-size:20px;margin-bottom:8px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo">UD</div>
+      <div><b>UPPER DECK</b><small>Club</small></div>
+    </div>
+
+    <div class="card" id="card">
+      <div id="form-view">
+        <span class="badge">JOIN THE CLUB — FREE</span>
+        <h1>Member deals & <span>cage-time specials</span></h1>
+        <p class="sub">Join the Upper Deck Club and be first to know about deals, events, and openings at Riverdale's #1 batting facility.</p>
+        <ul class="perks">
+          <li>Member-only deals &amp; cage-time specials</li>
+          <li>Early access to events &amp; league openings</li>
+          <li>Birthday &amp; party perks</li>
+        </ul>
+
+        <form id="signup-form" novalidate>
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required/>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required/>
+
+          <label for="phone">Mobile number</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"/>
+
+          <label for="birthday">Birthday (for your birthday deal 🎂)</label>
+          <input id="birthday" name="birthday" type="date"/>
+
+          <label>What are you into? (pick any)</label>
+          <div class="chips" id="interests">
+            <label class="chip"><input type="checkbox" value="Cage Time"/> Cage Time</label>
+            <label class="chip"><input type="checkbox" value="Lessons / Coaching"/> Lessons / Coaching</label>
+            <label class="chip"><input type="checkbox" value="Parties & Events"/> Parties &amp; Events</label>
+            <label class="chip"><input type="checkbox" value="Teams / Leagues"/> Teams / Leagues</label>
+            <label class="chip"><input type="checkbox" value="Film & TV"/> Film &amp; TV</label>
+          </div>
+
+          <div class="check"><input id="cEmail" type="checkbox" checked/><span>Email me deals &amp; club news</span></div>
+          <div class="check"><input id="cSms" type="checkbox"/><span>Text me deal alerts (msg &amp; data rates may apply)</span></div>
+
+          <button id="submitBtn" type="submit">Join the Club</button>
+          <p class="fine">By joining you agree to receive messages from Upper Deck Batting Range. Unsubscribe anytime.</p>
+        </form>
+      </div>
+
+      <div class="ok" id="ok-view">
+        <h2>You're in the Club! ⚾</h2>
+        <p>Welcome to the Upper Deck Club. Watch for your first member deal soon — see you in the cages.</p>
+      </div>
+      <div class="err" id="err-view">
+        <h2>That didn't go through</h2>
+        <p>Please try again in a moment, or sign up at the front desk and we'll add you.</p>
+      </div>
+    </div>
+  </div>
+
+<script>
+  (function(){
+    var params=new URLSearchParams(location.search);
+    var source=params.get('src')==='qr'?'In-Store QR':'Website';
+    var form=document.getElementById('signup-form');
+    var btn=document.getElementById('submitBtn');
+    function show(id){
+      document.getElementById('form-view').style.display='none';
+      document.getElementById('ok-view').style.display=id==='ok'?'block':'none';
+      document.getElementById('err-view').style.display=id==='err'?'block':'none';
+    }
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();
+      var name=document.getElementById('name').value.trim();
+      var email=document.getElementById('email').value.trim();
+      if(!name||!email){alert('Please add your name and email.');return;}
+      var interests=[].slice.call(document.querySelectorAll('#interests input:checked')).map(function(c){return c.value;});
+      btn.disabled=true;btn.textContent='Joining…';
+      var payload={
+        name:name, email:email,
+        phone:document.getElementById('phone').value.trim(),
+        birthday:document.getElementById('birthday').value||null,
+        interests:interests,
+        emailConsent:document.getElementById('cEmail').checked,
+        smsConsent:document.getElementById('cSms').checked,
+        source:source
+      };
+      try{
+        var res=await fetch('/.netlify/functions/loyalty-signup',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+        if(res.ok){show('ok');}else{throw new Error('bad');}
+      }catch(err){btn.disabled=false;btn.textContent='Join the Club';show('err');}
+    });
+  })();
+</script>
+</body>
+</html>
