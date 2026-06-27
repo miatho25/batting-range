@@ -8,6 +8,9 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Show banner until July 6 at noon (the day they reopen)
+  const showBanner = new Date() < new Date('2026-07-06T12:00:00');
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -28,12 +31,19 @@ const Navbar = () => {
         isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
       }`}
     >
+      {/* July 4th closure banner — auto-hides July 6th at noon */}
+      {showBanner && (
+        <div className="bg-blue-900 border-b-2 border-red-600 text-center py-2 px-4 text-sm font-semibold text-white">
+          🎆 We will be <span className="text-red-400">closed Sat July 4th &amp; Sun July 5th</span> — Back open Mon July 6th at 12PM &nbsp;🇺🇸
+        </div>
+      )}
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <img 
-              src="https://0201.nccdn.net/1_2/000/000/154/a0b/TheUpperDeckBattingRangeLOGO.PNG" 
+            <img
+              src="https://0201.nccdn.net/1_2/000/000/154/a0b/TheUpperDeckBattingRangeLOGO.PNG"
               alt="Upper Deck Batting Range Logo"
               className="h-16 w-auto transform group-hover:scale-105 transition-transform duration-300"
             />
