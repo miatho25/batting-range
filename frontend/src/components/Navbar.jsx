@@ -33,8 +33,10 @@ const Navbar = () => {
     >
       {/* July 4th closure banner — auto-hides July 6th at noon */}
       {showBanner && (
-        <div className="bg-blue-900 border-b-2 border-red-600 text-center py-2 px-4 text-sm font-semibold text-white">
-          🎆 We will be <span className="text-red-400">closed Sat July 4th &amp; Sun July 5th</span> — Back open Mon July 6th at 12PM &nbsp;🇺🇸
+        <div style={{background:'#1e3a5f', borderLeft:'6px solid #dc2626', textAlign:'center', padding:'10px 16px', fontSize:'14px', fontWeight:'700', color:'white'}}>
+          🎆&nbsp; We will be{' '}
+          <span style={{color:'#f87171'}}>closed Sat July 4th &amp; Sun July 5th</span>
+          {' '}— Back open Mon July 6th at 12PM &nbsp;🎆 Happy 4th of July!
         </div>
       )}
 
