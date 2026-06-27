@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
@@ -18,6 +19,8 @@ import {
 } from 'lucide-react';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   const features = [
     {
       icon: <DollarSign className="w-6 h-6" />,
@@ -69,8 +72,8 @@ const Home = () => {
     <div className="min-h-screen bg-white">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative h-[700px] flex items-center justify-center overflow-hidden pt-20">
+      {/* Hero Section — FIX: min-h instead of h so mobile content isn't clipped; pt-28 accounts for navbar (80px) + banner (~40px) */}
+      <section className="relative min-h-[700px] flex items-center justify-center overflow-hidden pt-28">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -79,7 +82,8 @@ const Home = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 to-blue-900/75"></div>
         </div>
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16 sm:pt-0">
+        {/* FIX: removed pt-16 sm:pt-0 — section already has pt-20 for navbar */}
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-10">
           <div className="inline-block bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
             RIVERDALE'S #1 BATTING FACILITY
           </div>
@@ -90,7 +94,7 @@ const Home = () => {
             Come Practice Your Swing Today!
           </p>
           <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
-            Professional batting cages in Riverdale, GA • Baseball (25-85 mph) • Softball (2 slow pitch + 1 fast pitch) • 
+            Professional batting cages in Riverdale, GA • Baseball (25-85 mph) • Softball (2 slow pitch + 1 fast pitch) •
             Perfect for all skill levels
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -152,8 +156,8 @@ const Home = () => {
                 </div>
               </div>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Located in the heart of Riverdale, serving Atlanta's south side. Whether you're preparing for 
-                tryouts, working on your technique, or just having fun with family and friends, we provide the 
+                Located in the heart of Riverdale, serving Atlanta's south side. Whether you're preparing for
+                tryouts, working on your technique, or just having fun with family and friends, we provide the
                 perfect environment to practice and improve.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -164,11 +168,13 @@ const Home = () => {
                   Reserve Your Cage
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <a href="/services">
-                  <Button className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-6 text-lg rounded-lg">
-                    View Pricing
-                  </Button>
-                </a>
+                {/* FIX: useNavigate instead of <a> wrapping <Button> (invalid HTML — browser strips the anchor) */}
+                <Button
+                  onClick={() => navigate('/services')}
+                  className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-6 text-lg rounded-lg"
+                >
+                  View Pricing
+                </Button>
               </div>
             </div>
             <div className="relative">
