@@ -34,9 +34,9 @@ const Navbar = () => {
       {/* Labor Day closure banner — auto-hides Sept 8th at noon */}
       {showBanner && (
         <div style={{background:'#1e3a5f', borderLeft:'6px solid #dc2626', textAlign:'center', padding:'10px 16px', fontSize:'14px', fontWeight:'700', color:'white'}}>
-          🇺🇸&nbsp; We will be{' '}
+          We will be{' '}
           <span style={{color:'#f87171'}}>closed Sun Sept 6th &amp; Mon Sept 7th (Labor Day)</span>
-          {' '}— Back open Tue Sept 8th at 12PM &nbsp;🇺🇸 Have a great Labor Day weekend!
+          {' '}— Back open Tue Sept 8th at 12PM. Have a great Labor Day weekend!
         </div>
       )}
 
