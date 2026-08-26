@@ -8,8 +8,8 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Show banner until July 6 at noon (the day they reopen)
-  const showBanner = new Date() < new Date('2026-07-06T12:00:00');
+  // Show banner until Sept 8 at noon (the day they reopen)
+  const showBanner = new Date() < new Date('2026-09-08T12:00:00');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,12 +31,12 @@ const Navbar = () => {
         isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
       }`}
     >
-      {/* July 4th closure banner — auto-hides July 6th at noon */}
+      {/* Labor Day closure banner — auto-hides Sept 8th at noon */}
       {showBanner && (
         <div style={{background:'#1e3a5f', borderLeft:'6px solid #dc2626', textAlign:'center', padding:'10px 16px', fontSize:'14px', fontWeight:'700', color:'white'}}>
-          🎆&nbsp; We will be{' '}
-          <span style={{color:'#f87171'}}>closed Sat July 4th &amp; Sun July 5th</span>
-          {' '}— Back open Mon July 6th at 12PM &nbsp;🎆 Happy 4th of July!
+          🇺🇸&nbsp; We will be{' '}
+          <span style={{color:'#f87171'}}>closed Sun Sept 6th &amp; Mon Sept 7th (Labor Day)</span>
+          {' '}— Back open Tue Sept 8th at 12PM &nbsp;🇺🇸 Have a great Labor Day weekend!
         </div>
       )}
 
@@ -69,14 +69,11 @@ const Navbar = () => {
                 )}
               </Link>
             ))}
-          <a href="tel:770-742-3246">
+            <a href="tel:770-742-3246">
               <Button className="bg-red-600 hover:bg-red-700 text-white">
                 <Phone className="w-4 h-4 mr-2" />
                 770-742-3246
               </Button>
-            </a>
-            <a href="/signup.html">
-              <Button className="bg-blue-900 hover:bg-blue-800 text-white">Join the Club</Button>
             </a>
           </div>
 
@@ -108,14 +105,11 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-           <a href="tel:770-742-3246" className="block">
+            <a href="tel:770-742-3246" className="block">
               <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
                 <Phone className="w-4 h-4 mr-2" />
                 770-742-3246
               </Button>
-            </a>
-            <a href="/signup.html" className="block">
-              <Button className="w-full bg-blue-900 hover:bg-blue-800 text-white">Join the Club</Button>
             </a>
           </div>
         </div>
