@@ -16,11 +16,11 @@ const Navbar = () => {
       message: <>We will be <span style={{color:'#f87171'}}>closed Thu Nov 26 &amp; Fri Nov 27 for Thanksgiving</span> — back open Sat Nov 28. Happy Thanksgiving!</>,
     },
     { // Winter break: closed Mon Dec 7, 2026 — reopen Mon Jan 11, 2027
-      showFrom: '2026-11-28T12:00:00', reopen: '2027-01-11T12:00:00',
+      showFrom: '2026-11-13T00:00:00', reopen: '2027-01-11T12:00:00',
       message: <>We will be <span style={{color:'#f87171'}}>closed for the winter Dec 7 – Jan 10</span> — back open Mon Jan 11 at 12PM. Happy Holidays!</>,
     },
   ];
-  const showBanner = CLOSURES.find(c => new Date() >= new Date(c.showFrom) && new Date() < new Date(c.reopen));
+  const activeClosures = CLOSURES.filter(c => new Date() >= new Date(c.showFrom) && new Date() < new Date(c.reopen));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,10 +42,12 @@ const Navbar = () => {
         isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
       }`}
     >
-      {/* Holiday closure banner — auto-shows/hides per the CLOSURES list above */}
-      {showBanner && (
+      {/* Holiday closure banner(s) — auto-show/hide per the CLOSURES list above */}
+      {activeClosures.length > 0 && (
         <div style={{background:'#1e3a5f', borderLeft:'6px solid #dc2626', textAlign:'center', padding:'10px 16px', fontSize:'14px', fontWeight:'700', color:'white'}}>
-          {showBanner.message}
+          {activeClosures.map((c, i) => (
+            <div key={i} style={i > 0 ? {marginTop:'6px', paddingTop:'6px', borderTop:'1px solid rgba(255,255,255,0.25)'} : undefined}>{c.message}</div>
+          ))}
         </div>
       )}
 
